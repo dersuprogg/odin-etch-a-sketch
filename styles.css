@@ -82,9 +82,5 @@ body {
 }
 
 .cell {
-  border: 1px solid #aaa;
-}
-
-.cell:hover {
-  background-color: red;
+  border: 1px solid #2b2b2b;
 }

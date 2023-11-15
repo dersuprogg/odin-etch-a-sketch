@@ -11,3 +11,14 @@ function makeCells(numberOfCells) {
 }
 
 makeCells(16);
+
+let cellColor = "yellow";
+
+const cells = document.querySelectorAll(".cell");
+
+cells.forEach((cell) => {
+  cell.addEventListener("mouseenter", function () {
+    this.style.backgroundColor = cellColor;
+    this.style.borderColor = cellColor;
+  });
+});

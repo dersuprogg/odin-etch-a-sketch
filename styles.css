@@ -21,6 +21,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Ubuntu Mono", monospace;
+  height: 100vh;
 }
 /*
   5. Improve media defaults
@@ -60,4 +61,30 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2a33;
+}
+
+.board {
+  background-color: #42414d;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+}
+
+.cell {
+  border: 1px solid #aaa;
+}
+
+.cell:hover {
+  background-color: red;
 }

@@ -1,5 +1,6 @@
 const board = document.querySelector(".board");
 const sizeBtns = document.querySelectorAll(".sizes .btn");
+const colorPicker = document.querySelector(".color-picker");
 
 function makeCells(numberOfCells) {
   board.innerHTML = ``;
@@ -12,13 +13,18 @@ function makeCells(numberOfCells) {
   }
 }
 
-let cellColor = "yellow";
+let cellColor = colorPicker.value;
+
+colorPicker.addEventListener("input", function () {
+  cellColor = this.value;
+  console.log(cellColor);
+});
 
 function makeBoardPaintable() {
   const cells = document.querySelectorAll(".cell");
   console.log(this);
   cells.forEach(function (cell) {
-    cell.addEventListener("mouseover", function () {
+    cell.addEventListener("mouseenter", function () {
       console.log("XD");
       this.style.backgroundColor = cellColor;
       this.style.borderColor = cellColor;
